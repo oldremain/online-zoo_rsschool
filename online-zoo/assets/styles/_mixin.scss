@@ -1,0 +1,17 @@
+@mixin h1_font_style {
+  font-weight: 700;
+  font-size: 114px;
+  line-height: 80%;
+}
+
+@mixin h2_font_style {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+@mixin h3_font_style {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+}
