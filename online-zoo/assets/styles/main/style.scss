@@ -1,1 +1,10 @@
 @use "../global";
+@use "header";
+@use "welcome";
+
+.app {
+  height: inherit;
+}
+.main {
+  height: 100%;
+}
