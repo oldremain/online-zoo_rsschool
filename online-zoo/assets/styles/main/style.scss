@@ -1,6 +1,8 @@
 @use "../global";
 @use "header";
 @use "welcome";
+@use "backstage";
+@use "pets";
 
 .app {
   height: inherit;

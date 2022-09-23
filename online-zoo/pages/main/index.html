@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Online-zoo</title>
   </head>
@@ -67,9 +75,193 @@
           </div>
         </section>
         <section class="section-backstage section">
-          <div class="container"></div>
+          <div class="container">
+            <div class="section-backstage__content-wrap">
+              <div class="section-backstage__image-container">
+                <img
+                  src="../../assets/images/bamboo-man.jpg"
+                  alt="A man with bamboo cap"
+                  class="section-backstage__image"
+                />
+              </div>
+              <article class="section-backstage__article">
+                <h2 class="section-backstage__heading">
+                  The Backstage of the Wilderness World.
+                </h2>
+                <p class="section-backstage__heading-descr">
+                  The site was founded on the basis of a volunteer movement to
+                  protect and care for animals.
+                </p>
+                <h3 class="section-backstage__about-heading">How it works</h3>
+                <p class="section-backstage__about-heading-descr">
+                  The main goal is to help the animals, as well as the nature
+                  reserves and zoos where they are kept. We are currently
+                  working on video projects targeting pandas in China, eagles on
+                  an island near Los Angeles, alligators in Florida and gorillas
+                  in the Congo. These have a total of more than 1,500 mammals
+                  and reptiles.
+                </p>
+              </article>
+            </div>
+            <img
+              src="../../assets/images/flower_bouquet.png"
+              alt="decorative flower bouquet"
+              class="section-backstage__decorative-image"
+            />
+          </div>
+        </section>
+        <section class="section-pets section">
+          <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="section-pets__card pets-card">
+                    <div class="pets-card__image-container">
+                      <img
+                        src="../../assets/images/animals/panda.png"
+                        alt=""
+                        class="pets-card__image"
+                      />
+                    </div>
+                    <div class="pets-card__info">
+                      <h3 class="pets-card__heading">giant Pandas</h3>
+                      <p class="pets-card__location">
+                        Native to Southwest China
+                      </p>
+                      <img
+                        src="../../assets/icons/banana-icon.png"
+                        alt=""
+                        class="pets-card__label"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="section-pets__card pets-card">
+                    <div class="pets-card__image-container">
+                      <img
+                        src="../../assets/images/animals/eagle.png"
+                        alt=""
+                        class="pets-card__image"
+                      />
+                    </div>
+                    <div class="pets-card__info">
+                      <h3 class="pets-card__heading">Eagles</h3>
+                      <p class="pets-card__location">Native to South America</p>
+                      <img
+                        src="../../assets/icons/meet-icon.png"
+                        alt=""
+                        class="pets-card__label"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="section-pets__card pets-card">
+                    <div class="pets-card__image-container">
+                      <img
+                        src="../../assets/images/animals/gorilla.png"
+                        alt=""
+                        class="pets-card__image"
+                      />
+                    </div>
+                    <div class="pets-card__info">
+                      <h3 class="pets-card__heading">Gorillas</h3>
+                      <p class="pets-card__location">Native to Congo</p>
+                      <img
+                        src="../../assets/icons/banana-icon.png"
+                        alt=""
+                        class="pets-card__label"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="section-pets__card pets-card">
+                    <div class="pets-card__image-container">
+                      <img
+                        src="../../assets/images/animals/lazybone.png"
+                        alt=""
+                        class="pets-card__image"
+                      />
+                    </div>
+                    <div class="pets-card__info">
+                      <h3 class="pets-card__heading">Two-toed Sloth</h3>
+                      <p class="pets-card__location">
+                        Mesoamerica, South America
+                      </p>
+                      <img
+                        src="../../assets/icons/banana-icon.png"
+                        alt=""
+                        class="pets-card__label"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="section-pets__card pets-card">
+                    <div class="pets-card__image-container">
+                      <img
+                        src="../../assets/images/animals/cheetah.png"
+                        alt=""
+                        class="pets-card__image"
+                      />
+                    </div>
+                    <div class="pets-card__info">
+                      <h3 class="pets-card__heading">cheetahs</h3>
+                      <p class="pets-card__location">Native to Africa</p>
+                      <img
+                        src="../../assets/icons/meet-icon.png"
+                        alt=""
+                        class="pets-card__label"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="section-pets__card pets-card">
+                    <div class="pets-card__image-container">
+                      <img
+                        src="../../assets/images/animals/penguin.png"
+                        alt=""
+                        class="pets-card__image"
+                      />
+                    </div>
+                    <div class="pets-card__info">
+                      <h3 class="pets-card__heading">Penguins</h3>
+                      <p class="pets-card__location">Native to Antarctica</p>
+                      <img
+                        src="../../assets/icons/meet-icon.png"
+                        alt=""
+                        class="pets-card__label"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <button
+              type="button"
+              class="swiper-button-prev swiper-button"
+            ></button>
+            <button
+              type="button"
+              class="swiper-button-next swiper-button"
+            ></button>
+
+            <div class="section-pets__link-wrap">
+              <a href="#" class="section-pets__link">choose your favorite</a>
+            </div>
+          </div>
+
+          <div class="section-pets__decorative-image decorative-image--left">
+            <img src="../../assets/images/palm.png" alt="" />
+          </div>
+          <div class="section-pets__decorative-image decorative-image--right">
+            <img src="../../assets/images/strelitzia.png" alt="" />
+          </div>
         </section>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

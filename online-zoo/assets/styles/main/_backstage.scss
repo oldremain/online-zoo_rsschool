@@ -1,0 +1,33 @@
+@use "../global" as *;
+
+.section-backstage {
+  position: relative;
+  padding-top: 140px;
+}
+.section-backstage__content-wrap {
+  display: flex;
+  gap: 87px;
+  margin: 0 -15px;
+  color: $black_blue;
+}
+.section-backstage__heading {
+  @include h2_font_style;
+  margin-bottom: 20px;
+}
+.section-backstage__heading-descr {
+  @extend %fz_medium_light;
+  margin-bottom: 54px;
+}
+.section-backstage__about-heading {
+  @extend %fz_large;
+  margin-bottom: 34px;
+}
+.section-backstage__about-heading-descr {
+  @extend %fz_medium_light;
+}
+
+.section-backstage__decorative-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

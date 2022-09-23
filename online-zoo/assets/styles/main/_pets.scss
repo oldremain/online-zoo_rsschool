@@ -1,0 +1,145 @@
+@use "../global" as *;
+
+.section-pets {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 100px;
+
+  .container {
+    position: relative;
+    max-width: 1190px;
+  }
+}
+.swiper {
+  width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+.swiper-scrollbar {
+  display: none;
+}
+.swiper-button {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: $orangeGrad;
+
+  &.swiper-button-prev {
+    left: -70px;
+
+    &::after {
+      content: "\2190";
+      line-height: initial;
+      color: $white;
+      font-size: 16px;
+    }
+  }
+
+  &.swiper-button-next {
+    right: -70px;
+
+    &::after {
+      content: "\2192";
+      line-height: initial;
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}
+
+.pets-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 366px;
+  border: 1px solid transparent;
+  background-clip: border-box;
+  border-radius: 5px;
+  background: $white_dark;
+
+  &::before {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    background: $orangeGrad;
+    margin: -1px;
+    border-radius: inherit;
+  }
+}
+
+.pets-card__image-container {
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.pets-card__info {
+  position: relative;
+  padding: 8px 16px 14px;
+  background: white;
+  border-radius: 0px 0px 5px 5px;
+
+  .pets-card__heading {
+    @extend %fz_medium;
+    text-transform: uppercase;
+  }
+
+  .pets-card__location {
+    @extend %fz_small;
+  }
+
+  .pets-card__label {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+.section-pets__link-wrap {
+  @include flex-align-center;
+  width: 298px;
+  height: 54px;
+  max-width: 100%;
+  margin: auto;
+  background: #fe9013;
+  color: $white;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+
+  .section-pets__link {
+    @extend %fz_medium;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.section-pets__decorative-image {
+  position: absolute;
+  bottom: 0;
+
+  &.decorative-image--left {
+    left: 0;
+  }
+  &.decorative-image--right {
+    right: 0;
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
