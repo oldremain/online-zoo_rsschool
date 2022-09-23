@@ -30,6 +30,7 @@
   height: 62px;
   border-radius: 50%;
   background: $orangeGrad;
+  top: 43%;
 
   &.swiper-button-prev {
     left: -70px;
@@ -107,16 +108,7 @@
 }
 
 .section-pets__link-wrap {
-  @include flex-align-center;
-  width: 298px;
-  height: 54px;
-  max-width: 100%;
-  margin: auto;
-  background: #fe9013;
-  color: $white;
-  border-radius: 25px;
-  text-align: center;
-  cursor: pointer;
+  @include section-main-link;
 
   .section-pets__link {
     @extend %fz_medium;

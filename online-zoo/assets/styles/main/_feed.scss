@@ -1,0 +1,85 @@
+@use "../global" as *;
+
+.section-feed {
+  padding: 69px 0 100px;
+  background: $pinkGrad;
+}
+.section-feed__content {
+  padding: 41px 53px 59px 99px;
+  background: $white_dark;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+.section-feed__heading {
+  @include h2_font_style;
+  margin-bottom: 30px;
+  color: $orange-light;
+  text-align: center;
+}
+.section-feed__intro {
+  @extend %fz_large;
+  margin-bottom: 40px;
+  color: $black_blue;
+}
+.section-feed__descr {
+  @extend %fz_medium_light;
+
+  &.bold {
+    @extend %fz_medium;
+    margin-bottom: 10px;
+  }
+
+  .section-feed__descr-link {
+    display: inline-block;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $orange-light;
+  }
+}
+
+.feed-content__heading {
+  @include h3_font_style;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: $black_blue;
+}
+
+.feed-content__cards {
+  @include flex-align-center;
+  gap: 30px;
+  margin-bottom: 70px;
+
+  .cards__arrow {
+    transform: translateY(-35px);
+  }
+}
+.feed-content__card {
+  width: 168px;
+  height: 244px;
+  max-width: 100%;
+
+  &:nth-child(3) {
+    transform: translateY(20px);
+  }
+}
+.card__image {
+  @include flex-align-center;
+  height: 168px;
+  margin-bottom: 30px;
+  border: 1px solid $orange-light;
+  border-radius: 5px;
+  background-color: $white;
+}
+.card__descr {
+  @extend %fz_medium_light;
+  color: $black_blue;
+}
+.section-feed__link-wrap {
+  @include section-main-link;
+
+  .section-feed__link {
+    @extend %fz_medium;
+    display: block;
+    text-transform: uppercase;
+  }
+}
