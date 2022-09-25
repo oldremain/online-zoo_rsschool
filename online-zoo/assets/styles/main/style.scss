@@ -5,10 +5,8 @@
 @use "pets";
 @use "feed";
 @use "testimonials";
+@use "footer";
 
 .app {
   height: inherit;
-}
-.main {
-  height: 100%;
 }

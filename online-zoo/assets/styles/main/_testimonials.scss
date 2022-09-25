@@ -5,6 +5,7 @@ $timecolor: #bdbdbd;
 //$progressbar-thumb: #f5f7f6;
 
 .section-testimonials {
+  position: relative;
   padding: 140px 0 180px 0;
 
   .container {
@@ -113,6 +114,12 @@ $timecolor: #bdbdbd;
     display: block;
     text-transform: uppercase;
   }
+}
+
+.section-testimonials__decorative-image {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
 }
 
 //Slider

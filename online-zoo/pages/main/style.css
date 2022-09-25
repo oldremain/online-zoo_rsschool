@@ -29,6 +29,10 @@ aside {
   display: block;
 }
 
+main {
+  height: auto;
+}
+
 html,
 body {
   height: 100%;
@@ -89,19 +93,19 @@ h6 {
   font-weight: 400;
 }
 
-.section-feed__intro, .section-backstage__about-heading {
+.footer-form__control .footer-form__email-label, .section-feed__intro, .section-backstage__about-heading {
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
 }
 
-.section-testimonials__link-wrap .section-testimonials__link, .section-feed__descr.bold, .section-feed__link-wrap .section-feed__link, .pets-card__info .pets-card__heading, .section-pets__link-wrap .section-pets__link, .section__link-wrap .section__link, .header__nav .header__nav-list-item, .header__author-info {
+.footer__donate-link-wrap .footer__donate-link, .section-testimonials__link-wrap .section-testimonials__link, .section-feed__descr.bold, .section-feed__link-wrap .section-feed__link, .pets-card__info .pets-card__heading, .section-pets__link-wrap .section-pets__link, .section__link-wrap .section__link, .header__nav .header__nav-list-item, .header__author-info {
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
 }
 
-.review-card__person-name, .section-feed__descr, .card__descr, .section-backstage__heading-descr, .section-backstage__about-heading-descr {
+.footer-form__control .footer-form__email-input, .footer__social-list .social-list__item-link, .footer__nav .footer__nav-list, .footer__author-info, .review-card__person-name, .section-feed__descr, .card__descr, .section-backstage__heading-descr, .section-backstage__about-heading-descr {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
@@ -531,6 +535,7 @@ h6 {
 }
 
 .section-testimonials {
+  position: relative;
   padding: 140px 0 180px 0;
 }
 .section-testimonials .container {
@@ -662,6 +667,12 @@ h6 {
   text-transform: uppercase;
 }
 
+.section-testimonials__decorative-image {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+}
+
 .testimonials-swiper {
   margin-bottom: 60px;
 }
@@ -687,10 +698,192 @@ h6 {
   background: #fe9013;
 }
 
-.app {
-  height: inherit;
+.footer {
+  padding: 41px 0 50px 0;
+  background: #111115;
 }
 
-.main {
-  height: 100%;
+.footer__top-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: relative;
+  width: 82px;
+  margin-right: 63px;
+  padding: 3.5px 5px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.footer__logo .logo__text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 120%;
+}
+.footer__logo .logo__image {
+  position: absolute;
+  left: 10px;
+  bottom: 7px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.footer__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(237px, auto) 10px minmax(129px, auto);
+  grid-template-columns: minmax(237px, auto) minmax(129px, auto);
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  margin-bottom: 36px;
+}
+.footer__form .footer-form__submit-btn {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  width: 129px;
+  height: 42px;
+  background: #f1f3f2;
+  color: #4b9200;
+  border: 1px solid currentcolor;
+  border-radius: 5px;
+}
+
+.footer-form__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+.footer-form__control .footer-form__email-label {
+  color: #ffffff;
+}
+.footer-form__control .footer-form__email-input {
+  width: 228px;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid #fe9013;
+  border-radius: 2px;
+  background: transparent;
+  color: #bdbdbd;
+}
+
+.footer__donate-link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 298px;
+  height: 54px;
+  max-width: 100%;
+  margin: auto;
+  background: #fe9013;
+  color: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 0 44px 0;
+  border-radius: 5px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+}
+.footer__donate-link-wrap .footer__donate-link {
+  display: block;
+  text-transform: uppercase;
+}
+
+.footer__bottom-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.footer__social-list .social-list__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  color: #ffffff;
+}
+.footer__social-list .social-list__item-link .fa-brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.5);
+  font-size: 15px;
+}
+
+.footer__nav {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.footer__nav .footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 58px;
+  color: #ffffff;
+}
+
+.footer__author-info {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  font-weight: 100;
+  color: rgba(253, 253, 255, 0.52);
+}
+
+.app {
+  height: inherit;
 }
