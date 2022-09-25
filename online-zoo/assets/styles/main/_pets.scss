@@ -1,4 +1,5 @@
 @use "../global" as *;
+@use "./slider" as *;
 
 .section-pets {
   position: relative;
@@ -8,50 +9,6 @@
   .container {
     position: relative;
     max-width: 1190px;
-  }
-}
-.swiper {
-  width: 100%;
-  height: auto;
-  margin-bottom: 80px;
-}
-
-.swiper-slide {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 20px;
-}
-.swiper-scrollbar {
-  display: none;
-}
-.swiper-button {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: $orangeGrad;
-  top: 43%;
-
-  &.swiper-button-prev {
-    left: -70px;
-
-    &::after {
-      content: "\2190";
-      line-height: initial;
-      color: $white;
-      font-size: 16px;
-    }
-  }
-
-  &.swiper-button-next {
-    right: -70px;
-
-    &::after {
-      content: "\2192";
-      line-height: initial;
-      color: $white;
-      font-size: 16px;
-    }
   }
 }
 

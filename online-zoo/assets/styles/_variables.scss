@@ -17,43 +17,13 @@ $gray_light: #f1f3f2;
 // Gradients:
 $orangeGrad: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 $pinkGrad: linear-gradient(
-    315.75deg,
-    rgba(254, 210, 144, 0.7) 30.06%,
-    #febdab 100.95%,
-    rgba(254, 210, 144, 0.7) 106.36%
-  ),
-  linear-gradient(
-    315.75deg,
-    rgba(254, 189, 171, 0.74) 30.06%,
-    rgba(243, 169, 248, 0.66) 50.74%,
-    #e0d8f0 80.49%,
-    #eaf7fe 127.9%,
-    #eaf7fe 149.54%
-  ),
-  linear-gradient(
-    315.75deg,
-    rgba(254, 189, 171, 0.74) 30.06%,
-    rgba(243, 169, 248, 0.66) 50.74%,
-    #e0d8f0 80.49%,
-    #eaf7fe 127.9%,
-    #eaf7fe 149.54%
-  );
-$violetGrad: linear-gradient(
-    315.75deg,
-    rgba(254, 189, 171, 0.74) 30.06%,
-    rgba(243, 169, 248, 0.66) 50.74%,
-    #e0d8f0 80.49%,
-    #eaf7fe 127.9%,
-    #eaf7fe 149.54%
-  ),
-  linear-gradient(
-    315.75deg,
-    rgba(254, 189, 171, 0.74) 30.06%,
-    rgba(243, 169, 248, 0.66) 50.74%,
-    #e0d8f0 80.49%,
-    #eaf7fe 127.9%,
-    #eaf7fe 149.54%
-  );
+  315.75deg,
+  rgba(254, 189, 171, 0.74) 30.06%,
+  rgba(243, 169, 248, 0.66) 50.74%,
+  #e0d8f0 80.49%,
+  #eaf7fe 127.9%,
+  #eaf7fe 149.54%
+);
 
 // Font sizes:
 %fz_large {

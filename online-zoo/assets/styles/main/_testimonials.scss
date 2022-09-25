@@ -1,0 +1,141 @@
+@use "../global" as *;
+@use "./slider" as *;
+
+$timecolor: #bdbdbd;
+//$progressbar-thumb: #f5f7f6;
+
+.section-testimonials {
+  padding: 140px 0 180px 0;
+
+  .container {
+    position: relative;
+  }
+}
+.section-testimonials__heading {
+  @include h3_font_style;
+  margin-bottom: 47px;
+  color: $black_blue;
+  text-align: center;
+}
+.review-card {
+  width: 100%;
+  max-width: 245px;
+  height: 309px;
+  position: relative;
+  z-index: 1;
+  border: 1px solid transparent;
+  background-clip: border-box;
+  border-radius: 20px;
+  background: $white_dark;
+
+  &::before {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    background: $orangeGrad;
+    margin: -1px;
+    border-radius: inherit;
+  }
+}
+.review-card__wrapper {
+  height: 100%;
+  padding: 16px;
+  background: $gray_light;
+  border-radius: inherit;
+}
+
+.review-card__person-info {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  column-gap: 10px;
+  margin-bottom: 11px;
+}
+.review-card__person-image {
+  grid-row: span 2;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.review-card__person-name {
+  @extend %fz_medium_light;
+}
+.review-card__time-local {
+  @extend %fz_small;
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin: 0 -20px 0 0;
+  color: $timecolor;
+
+  & .time__offset::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    transform: translateY(-50%);
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+
+.review-card__body {
+  height: 79%;
+  overflow: hidden;
+  color: $gray;
+
+  .review-card__body-text {
+    @extend %fz_small;
+  }
+}
+
+.section-testimonials__link-wrap {
+  @include section-main-link;
+  margin: 0 0 0 27px;
+  border-radius: 5px;
+  background: $orangeGrad;
+
+  .section-testimonials__link {
+    @extend %fz_medium;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+//Slider
+.testimonials-swiper {
+  margin-bottom: 60px;
+}
+.testimonials-slide {
+  justify-content: center;
+}
+
+.swiper-pagination-progressbar {
+  &.custom-prop {
+    position: absolute;
+    top: calc(100% - 84px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 599px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  & .swiper-pagination-progressbar-fill {
+    background: $orange-light;
+  }
+}
