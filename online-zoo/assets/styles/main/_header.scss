@@ -47,6 +47,17 @@
 
   .header__nav-list-item {
     @extend %fz_medium;
+
+    .header__nav-list-item-link {
+      @include animation-params;
+      &:hover {
+        color: $orange-light;
+      }
+
+      &.active-link {
+        color: $orange-light;
+      }
+    }
   }
 }
 
@@ -54,4 +65,11 @@
   @extend %fz_medium;
   margin: auto 0;
   cursor: pointer;
+
+  .author-info__link {
+    @include animation-params;
+    &:hover {
+      color: $orange-light;
+    }
+  }
 }

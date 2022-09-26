@@ -20,7 +20,16 @@
   height: 62px;
   border-radius: 50%;
   background: $orangeGrad;
+  background-size: 200% 200%;
   top: 43%;
+
+  &:hover {
+    animation: animate-hover-effect 280ms ease forwards;
+  }
+
+  &:active {
+    animation: animate-click-effect 280ms ease forwards;
+  }
 
   &.swiper-button-prev {
     left: -70px;
@@ -44,3 +53,6 @@
     }
   }
 }
+
+@include hover-link-animation;
+@include active-link-animation;

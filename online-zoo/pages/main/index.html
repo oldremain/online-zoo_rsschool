@@ -30,9 +30,10 @@
   </head>
   <body>
     <div class="app">
+      <h1 class="app__heading visually-hidden">Petstore Online</h1>
       <header class="header">
         <div class="container">
-          <div class="header__logo logo">
+          <a href="#" class="header__logo logo">
             <span class="logo__text"
               >PetStory <br />
               online</span
@@ -42,11 +43,13 @@
               alt="bamboo logo"
               class="logo__image"
             />
-          </div>
+          </a>
           <nav class="header__nav">
             <ul class="header__nav-list">
               <li class="header__nav-list-item">
-                <a href="#" class="header__nav-list-item-link">About</a>
+                <a href="#" class="header__nav-list-item-link active-link"
+                  >About</a
+                >
               </li>
               <li class="header__nav-list-item">
                 <a href="#" class="header__nav-list-item-link">Map</a>
@@ -62,8 +65,12 @@
               </li>
             </ul>
           </nav>
-          <div class="header__author-info">
-            <span>Designed by ©</span>
+          <div class="header__author-info author-info">
+            <a
+              href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+              class="author-info__link"
+              >Designed by ©</a
+            >
           </div>
         </div>
       </header>
@@ -71,12 +78,12 @@
       <main class="main">
         <section class="section-welcome section">
           <div class="container">
-            <div class="section__content">
-              <h1 class="section__heading">
+            <div class="section-welcome__content">
+              <h2 class="section-welcome__heading">
                 Watch your <span>favorite</span> animal online
-              </h1>
-              <div class="section__link-wrap">
-                <a href="#" class="section__link">wath online</a>
+              </h2>
+              <div class="section-welcome__link-wrap">
+                <a href="#" class="section-welcome__link">watch online</a>
               </div>
             </div>
           </div>
@@ -917,7 +924,7 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__top-section">
-            <div class="footer__logo logo">
+            <a href="#" class="footer__logo logo">
               <span class="logo__text"
                 >PetStory <br />
                 online</span
@@ -927,7 +934,7 @@
                 alt="bamboo logo"
                 class="logo__image"
               />
-            </div>
+            </a>
             <form id="footer-form" class="footer__form footer-form">
               <div class="footer-form__control">
                 <label for="email-sub" class="footer-form__email-label"
@@ -938,6 +945,7 @@
                   id="email-sub"
                   class="footer-form__email-input"
                   placeholder="Enter your email"
+                  required
                 />
               </div>
               <button type="submit" class="footer-form__submit-btn">
@@ -951,25 +959,34 @@
           <div class="footer__bottom-section">
             <ul class="footer__social-list social-list">
               <li class="social-list__item">
-                <a href="#" class="social-list__item-link">
+                <a
+                  href="https://www.facebook.com"
+                  class="social-list__item-link"
+                >
                   <i class="fa-brands fa-facebook-f"></i>
                   <span>Facebook</span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a href="#" class="social-list__item-link">
+                <a href="https://twitter.com" class="social-list__item-link">
                   <i class="fa-brands fa-twitter"></i>
                   <span>Twitter</span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a href="#" class="social-list__item-link">
+                <a
+                  href="https://www.instagram.com"
+                  class="social-list__item-link"
+                >
                   <i class="fa-brands fa-instagram"></i>
                   <span>Instagram</span>
                 </a>
               </li>
               <li class="social-list__item">
-                <a href="#" class="social-list__item-link">
+                <a
+                  href="https://www.youtube.com"
+                  class="social-list__item-link"
+                >
                   <i class="fa-brands fa-youtube"></i>
                   <span>YouTube</span>
                 </a>
@@ -978,7 +995,7 @@
             <nav class="footer__nav">
               <ul class="footer__nav-list nav-list">
                 <li class="nav-list__item">
-                  <a href="#" class="nav-list__link">About</a>
+                  <a href="#" class="nav-list__link active-link">About</a>
                 </li>
                 <li class="nav-list__item">
                   <a href="#" class="nav-list__link">Map</a>
@@ -991,10 +1008,13 @@
                 </li>
               </ul>
             </nav>
-            <div class="footer__author-info">
+            <a
+              href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+              class="footer__author-info"
+            >
               <span>Designed by Alisa Samborskaya</span>
               <span>©RSSchool & ©Yem Digital 2021</span>
-            </div>
+            </a>
           </div>
         </div>
       </footer>

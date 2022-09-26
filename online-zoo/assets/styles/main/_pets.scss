@@ -21,6 +21,7 @@
   background-clip: border-box;
   border-radius: 5px;
   background: $white_dark;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -37,8 +38,19 @@
 }
 
 .pets-card__image-container {
-  overflow: hidden;
+  //height: 100%;
   border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+
+  .pets-card__image {
+    @include adjust-image;
+    @include animation-params(300ms, linear);
+
+    &:hover {
+      //transform: scale(1.1) translateY(-75px);
+      transform: scale(1.1);
+    }
+  }
 }
 
 .pets-card__info {
@@ -46,6 +58,8 @@
   padding: 8px 16px 14px;
   background: white;
   border-radius: 0px 0px 5px 5px;
+  //transform: translateY(-62px);
+  //z-index: -1;
 
   .pets-card__heading {
     @extend %fz_medium;

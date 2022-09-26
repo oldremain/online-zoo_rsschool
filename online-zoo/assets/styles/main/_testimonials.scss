@@ -7,6 +7,7 @@ $timecolor: #bdbdbd;
 .section-testimonials {
   position: relative;
   padding: 140px 0 180px 0;
+  overflow: hidden;
 
   .container {
     position: relative;
@@ -108,6 +109,16 @@ $timecolor: #bdbdbd;
   margin: 0 0 0 27px;
   border-radius: 5px;
   background: $orangeGrad;
+  background-size: 200% 200%;
+
+  &:hover {
+    background: $orangeGrad;
+    animation: animate-hover-effect 280ms ease forwards;
+  }
+
+  &:active {
+    animation: animate-click-effect 280ms ease forwards;
+  }
 
   .section-testimonials__link {
     @extend %fz_medium;
@@ -116,15 +127,19 @@ $timecolor: #bdbdbd;
   }
 }
 
+@include hover-link-animation;
+@include active-link-animation;
+
 .section-testimonials__decorative-image {
   position: absolute;
-  bottom: -20px;
-  right: 0;
+  bottom: -130px;
+  right: -5px;
 }
 
-//Slider
+//---------------------------Slider----------------------------------//
 .testimonials-swiper {
   margin-bottom: 60px;
+  cursor: pointer;
 }
 .testimonials-slide {
   justify-content: center;

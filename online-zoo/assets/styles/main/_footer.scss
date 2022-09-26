@@ -23,7 +23,7 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
   border: 1px solid $white;
   border-radius: 2px;
   text-align: center;
-  color: $white;
+  color: $white !important;
   cursor: pointer;
 
   .logo__text {
@@ -54,6 +54,10 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
     color: $green;
     border: 1px solid currentcolor;
     border-radius: 5px;
+
+    &:hover {
+      color: $orange;
+    }
   }
 }
 .footer-form__control {
@@ -67,6 +71,7 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
   }
 
   .footer-form__email-input {
+    @include animation-params;
     @extend %fz_medium_light;
     width: 228px;
     height: 42px;
@@ -75,6 +80,16 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
     border-radius: 2px;
     background: transparent;
     color: $email-input-color;
+
+    &:focus {
+      color: $green;
+      border: 1px solid currentColor;
+    }
+
+    &:invalid {
+      color: $red;
+      border: 1px solid currentColor;
+    }
   }
 }
 //----------------------------------------------------//
@@ -84,6 +99,15 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
   margin: 0 0 44px 0;
   border-radius: 5px;
   background: $orangeGrad;
+
+  &:hover {
+    background: $orangeGrad;
+    animation: animate-hover-effect 280ms ease forwards;
+  }
+
+  &:active {
+    animation: animate-click-effect 280ms ease forwards;
+  }
 
   .footer__donate-link {
     @extend %fz_medium;
@@ -111,12 +135,30 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
     color: $white;
 
     .fa-brands {
+      @include animation-params(150ms);
       @include flex-align-center;
       width: 26px;
       height: 26px;
       border-radius: 50%;
       background: $social-link-bg;
       font-size: 15px;
+    }
+
+    span {
+      @include animation-params(150ms);
+    }
+
+    &:hover {
+      span {
+        color: $orange;
+      }
+      .fa-brands {
+        background-color: $orange;
+      }
+    }
+
+    &:active {
+      color: $green;
     }
   }
 }
@@ -129,15 +171,36 @@ $social-link-bg: rgba(196, 196, 196, 0.5);
     display: flex;
     gap: 58px;
     color: $white;
+
+    .nav-list__item {
+      @include animation-params;
+      &:hover {
+        color: $orange-light;
+      }
+
+      & .active-link {
+        color: $orange-light;
+      }
+    }
   }
 }
 
 .footer__author-info {
+  @include animation-params(150ms);
   @extend %fz_medium_light;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-weight: 100;
-  color: $white_dark;
+  color: $white_dark !important;
+  cursor: pointer;
+
+  &:hover {
+    color: $green !important;
+    text-decoration: underline;
+  }
 }
+
+@include hover-link-animation;
+@include active-link-animation;

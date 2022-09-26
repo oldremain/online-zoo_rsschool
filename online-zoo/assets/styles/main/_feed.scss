@@ -30,9 +30,14 @@
   }
 
   .section-feed__descr-link {
+    @include animation-params;
     display: inline-block;
     padding-bottom: 1px;
     border-bottom: 1px solid $orange-light;
+
+    &:hover {
+      color: $orange-light;
+    }
   }
 }
 
