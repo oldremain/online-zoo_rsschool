@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+.section-welcome {
+  padding-top: 12px;
+  background: url("../../assets/images/header_bg.png") no-repeat center / cover;
+}
+.section-welcome__content {
+  position: relative;
+  z-index: 0;
+  width: 540px;
+  max-width: 100%;
+  margin-left: auto;
+  padding: 75px 0 100px 35px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -35px;
+    z-index: -1;
+    display: block;
+    height: 465px;
+    width: 465px;
+    border-radius: 50%;
+    background: $orangeGrad;
+  }
+}
+
+.section-welcome__heading {
+  @include h1_font_style;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  color: $white;
+
+  span {
+    color: $yellow;
+  }
+}
+
+.section-welcome__link-wrap {
+  @include section-main-link;
+  background: $orangeGrad;
+  background-size: 200% 200%;
+
+  &:hover {
+    background: $orangeGrad;
+    animation: animate-hover-effect 280ms ease forwards;
+  }
+
+  &:active {
+    animation: animate-click-effect 280ms ease forwards;
+  }
+
+  .section-welcome__link {
+    @extend %fz_medium;
+    display: block;
+    text-transform: uppercase;
+    line-height: inherit;
+    color: $white;
+  }
+}
+
+@include hover-link-animation;
+@include active-link-animation;

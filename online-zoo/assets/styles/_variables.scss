@@ -1,0 +1,49 @@
+// Colors:
+$bg-color: #e5e5e5;
+$green: #4b9200;
+$orange: #e47209;
+$orange-light: #fe9013;
+$yellow: #ffee2e;
+$red: #d31414;
+$black: #000000;
+$black_blue: #333b41;
+$white: #ffffff;
+$white_dark: rgba(253, 253, 255, 0.52);
+
+$gray: #767474;
+$gray_smoky: #ababab;
+$gray_light: #f1f3f2;
+
+// Gradients:
+$orangeGrad: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+$greenGrad: linear-gradient(113.96deg, #4b9200, #478900);
+$pinkGrad: linear-gradient(
+  315.75deg,
+  rgba(254, 189, 171, 0.74) 30.06%,
+  rgba(243, 169, 248, 0.66) 50.74%,
+  #e0d8f0 80.49%,
+  #eaf7fe 127.9%,
+  #eaf7fe 149.54%
+);
+
+// Font sizes:
+%fz_large {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+}
+%fz_medium {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+%fz_medium_light {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+%fz_small {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+}

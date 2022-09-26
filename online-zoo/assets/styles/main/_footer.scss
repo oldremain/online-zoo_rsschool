@@ -1,0 +1,206 @@
+@use "../global" as *;
+
+$footer-bg: #111115;
+$email-input-color: #bdbdbd;
+$social-link-bg: rgba(196, 196, 196, 0.5);
+
+.footer {
+  padding: 41px 0 50px 0;
+  background: $footer-bg;
+}
+
+//----------------- TOP SECTION ----------------//
+.footer__top-section {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  align-self: flex-start;
+  position: relative;
+  width: 82px;
+  margin-right: 63px;
+  padding: 3.5px 5px;
+  border: 1px solid $white;
+  border-radius: 2px;
+  text-align: center;
+  color: $white !important;
+  cursor: pointer;
+
+  .logo__text {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+  }
+
+  .logo__image {
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+    transform: rotate(-10deg);
+  }
+}
+
+.footer__form {
+  display: grid;
+  grid-template-columns: minmax(237px, auto) minmax(129px, auto);
+  column-gap: 10px;
+  margin-bottom: 36px;
+
+  .footer-form__submit-btn {
+    align-self: end;
+    width: 129px;
+    height: 42px;
+    background: $gray_light;
+    color: $green;
+    border: 1px solid currentcolor;
+    border-radius: 5px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+.footer-form__control {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  .footer-form__email-label {
+    @extend %fz_large;
+    color: $white;
+  }
+
+  .footer-form__email-input {
+    @include animation-params;
+    @extend %fz_medium_light;
+    width: 228px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid $orange-light;
+    border-radius: 2px;
+    background: transparent;
+    color: $email-input-color;
+
+    &:focus {
+      color: $green;
+      border: 1px solid currentColor;
+    }
+
+    &:invalid {
+      color: $red;
+      border: 1px solid currentColor;
+    }
+  }
+}
+//----------------------------------------------------//
+
+.footer__donate-link-wrap {
+  @include section-main-link;
+  margin: 0 0 44px 0;
+  border-radius: 5px;
+  background: $orangeGrad;
+
+  &:hover {
+    background: $orangeGrad;
+    animation: animate-hover-effect 280ms ease forwards;
+  }
+
+  &:active {
+    animation: animate-click-effect 280ms ease forwards;
+  }
+
+  .footer__donate-link {
+    @extend %fz_medium;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+//--------------------BOTTOM-SECTION------------------//
+.footer__bottom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .social-list__item-link {
+    @extend %fz_medium_light;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $white;
+
+    .fa-brands {
+      @include animation-params(150ms);
+      @include flex-align-center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: $social-link-bg;
+      font-size: 15px;
+    }
+
+    span {
+      @include animation-params(150ms);
+    }
+
+    &:hover {
+      span {
+        color: $orange;
+      }
+      .fa-brands {
+        background-color: $orange;
+      }
+    }
+
+    &:active {
+      color: $green;
+    }
+  }
+}
+
+.footer__nav {
+  align-self: flex-end;
+
+  .footer__nav-list {
+    @extend %fz_medium_light;
+    display: flex;
+    gap: 58px;
+    color: $white;
+
+    .nav-list__item {
+      @include animation-params;
+      &:hover {
+        color: $orange-light;
+      }
+
+      & .active-link {
+        color: $orange-light;
+      }
+    }
+  }
+}
+
+.footer__author-info {
+  @include animation-params(150ms);
+  @extend %fz_medium_light;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 100;
+  color: $white_dark !important;
+  cursor: pointer;
+
+  &:hover {
+    color: $green !important;
+    text-decoration: underline;
+  }
+}
+
+@include hover-link-animation;
+@include active-link-animation;

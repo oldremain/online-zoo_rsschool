@@ -1,0 +1,16 @@
+@use "../global" as *;
+@use "header";
+@use "welcome";
+@use "backstage";
+@use "pets";
+@use "feed";
+@use "testimonials";
+@use "footer";
+
+.app {
+  height: inherit;
+
+  .app__heading {
+    @include visually-hidden;
+  }
+}
